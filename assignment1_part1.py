@@ -1,8 +1,7 @@
-# Custom exception class
+
 class ListDivideException(Exception):
     pass
 
-# Function to count elements divisible by 'divide'
 def list_divide(numbers, divide=2):
     count = 0
     for number in numbers:
@@ -10,7 +9,6 @@ def list_divide(numbers, divide=2):
             count += 1
     return count
 
-# Function to perform tests on list_divide
 def test_list_divide():
     try:
         if list_divide([1, 2, 3, 4, 5]) != 2:
@@ -27,5 +25,4 @@ def test_list_divide():
     except ListDivideException as e:
         print(f"Error: {e}")
 
-# Running the test function
 test_list_divide()
